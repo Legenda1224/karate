@@ -1,0 +1,236 @@
+*{
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.header__logo img{
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+.header__zagolovok h3{
+    font-size: 50px;
+    padding: 0 10px;
+    color: #9C3F3F;
+    letter-spacing: 1px
+}
+
+.header__logo_urfk img{
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+/*container*/
+
+.container{
+    padding-top: 50px;
+    max-width: 100%;
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.main__block{
+    background-color: #9C3F3F;
+    position: relative;
+    transition: 0.3s;
+    padding: 20px 0px;
+    margin: 0px 0px 20px 0px;
+    text-align: center;
+    max-width: 100%;
+    width: 370px;
+    height: auto;
+    overflow: hidden;
+}
+
+.main__block:nth-child(3){
+    margin: 0px 0px 20px 0px;
+}
+
+.main__block:nth-child(6){
+    margin: 0px 0px 20px 0px;
+}
+
+.main__block a{
+    transition: 0.3s;
+    padding: 20px 80px;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+    letter-spacing: 1px;
+}
+
+.main__block::before{
+    transition: 0.5s;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 73px;
+    left: 0;
+    top: 0;
+    background-color: #9C3F3F;
+}
+
+.main__block:hover::before{
+    
+    background-color: rgb(225, 186, 12);
+    width: 100%;
+
+}
+
+.main__block:hover a{
+    color: #b41818;
+}
+
+.main__block_width{
+    position: relative;
+    transition: 0.3s;
+    padding: 20px 0px;
+    text-align: center;
+    max-width: 100%;
+    width:100%;
+    height: auto;
+    background-color: #9C3F3F;
+}
+
+.main__block_width a{
+    transition: 0.3s;
+    padding: 20px 130px;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+    letter-spacing: 1px;
+}
+
+.main__block_width:hover a{
+    color: #b41818;
+}
+
+.main__block_width::before{
+    transition: 0.4s;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    left: 0;
+    top: 0;
+    background-color: #9C3F3F;
+}
+
+.main__block_width:hover::before{
+    background-color: rgb(225, 186, 12);
+    height: 73px;
+
+}
+
+
+/*media*/
+
+@media screen and (max-width:1130px){
+    .main{
+        justify-content: center;
+        padding: 0px 10px;
+    }
+
+    .main__block{
+        padding: 20px 0px;
+        margin: 0px 10px 20px 10px;
+        width: 100%;
+    }
+
+    .main__block:nth-child(3){
+        margin: 0px 10px 20px 10px;
+    }
+    
+    .main__block:nth-child(6){
+        margin: 0px 10px 20px 10px;
+    }
+}
+
+@media screen and (max-width:991px){
+    .header{
+        padding: 20px 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+      
+    .header__zagolovok h3{
+        font-size: 50px;
+        padding: 0 10px;
+    }
+    
+}
+@media screen and (max-width:530px){
+    .header{
+        padding: 20px 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+      
+    .header__zagolovok h3{
+        font-size: 30px;
+        padding: 0 10px;
+    }
+
+    .main{
+        padding: 0px 0px;
+    }
+    
+    
+}
+
+@media screen and (max-width:420px){
+    .main__block a{
+        font-size: 18px;
+    }
+    .main__block_width{
+        padding: 20px 0px;
+        max-width: 100%;
+        width:100%;
+    }
+    
+    .main__block_width a{
+        padding: 20px 130px;
+        font-size: 18px;
+    }
+    .main__block{
+        padding: 20px 0px;
+        margin: 0px 0px 20px 0px;
+        width: 100%;
+    }
+    .main__block:nth-child(3){
+        margin: 0px 0px 20px 0px;
+    }
+    
+    .main__block:nth-child(6){
+        margin: 0px 0px 20px 0px;
+    }
+}
