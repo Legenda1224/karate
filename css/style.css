@@ -203,34 +203,41 @@ body{
     .main{
         padding: 0px 0px;
     }
+    .main__block_width{
+        margin: 0px 10px 20px 10px;
+    }
+    
     
     
 }
 
 @media screen and (max-width:420px){
+
     .main__block a{
+        padding: 20px 50px;
         font-size: 18px;
     }
     .main__block_width{
         padding: 20px 0px;
         max-width: 100%;
         width:100%;
+        margin: 0px 10px 20px 10px;
     }
     
     .main__block_width a{
-        padding: 20px 130px;
+        padding: 20px 50px;
         font-size: 18px;
     }
     .main__block{
         padding: 20px 0px;
-        margin: 0px 0px 20px 0px;
+        margin: 0px 10px 20px 10px;
         width: 100%;
     }
     .main__block:nth-child(3){
-        margin: 0px 0px 20px 0px;
+        margin: 0px 10px 20px 10px;
     }
     
     .main__block:nth-child(6){
-        margin: 0px 0px 20px 0px;
+        margin: 0px 10px 20px 10px;
     }
 }
