@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    font-family: 'Kalnia', serif;}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: brown
+}
+
+
+/*Бургер меню*/
+
+.burger-menu{
+    display: block;
+}
+
+.burger-menu_button {
+    background: #b61818;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 1001;
+    width: 60px;
+    height: 50px;
+    border-radius: 0%;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+
+.burger-menu_button:hover .burger-menu_lines {
+    filter: brightness(0.7);
+}
+
+.burger-menu_lines::before,
+.burger-menu_lines::after,
+.burger-menu_lines {
+    position: absolute;
+	z-index:2003;
+    width: 35px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.burger-menu_lines {
+    width: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.burger-menu_lines::before {
+width: 30px;
+    content: '';
+    top: -10px;
+}
+
+.burger-menu_lines::after {
+    width: 30px;
+    content: '';
+    top: 10px;
+}
+
+.burger-menu_active .burger-menu_lines {
+    background-color: transparent;
+}
+
+.burger-menu_active .burger-menu_lines::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.burger-menu_active .burger-menu_lines::after{
+    width: 30px;
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.burger-menu_nav {
+    padding-top: 50px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: 100%;
+    background: #9C3F3F;
+    /* background-image:linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url(../img/02.jpg); */
+    /* background-size: cover; */
+    overflow-y: auto;
+    right: -100%;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+}
+
+.burger-menu_active .burger-menu_nav {
+    right: -80%;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+}
+
+.burger-menu_link {
+    background: #9C3F3F;
+    position: relative;
+    z-index: 55;
+    text-align: left;
+    padding: 30px 20px;
+    top: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    transition: 0.4s;
+}
+
+.burger-menu_link:hover {
+    color: #fb0b3b;
+    filter: brightness(0.9);
+}
+
+.burger-menu_overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+
+.burger-menu_active .burger-menu_overlay {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+
+
+
+.container{
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 10px 20px 10px;
+}
+
+
+
+.header h3{
+    padding-top: 0px;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+
+.exit{
+    transition: 0.4s linear;
+    top: 0px;
+    left: -80px;
+    position: fixed;
+    background: white;
+    padding: 10px 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.exit a{
+    transition: 0.3s;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 10px;
+}
+
+.exit:hover{
+    background: white;
+    left: 0;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+}
+
+.exit:hover a{
+    color: black;
+}
+
+
+.dodzekyn{
+    padding: 20px 0;
+    background-color: #9C3F3F;
+    border: 5px solid #c10404;
+    border-radius: 5px;
+}
+
+.dodzekyn p{
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 30px;
+    letter-spacing: 2px;
+    line-height: 30px;
+    color: #ffffff;
+}
+
+.dodzekyn span{
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    color: aquamarine;
+    margin-bottom: -20px;
+}
+
+
+@media screen and (max-width:500px) {
+
+    .container{
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0px 0px 0px 0px;
+    }
+
+    
+    .dodzekyn p{
+        font-size: 16px;
+        padding: 20px 10px;
+        letter-spacing: 2px;
+        line-height: 25px;
+    }
+    .header h3{
+        padding-top: 30px;
+        text-align: center;
+        color: white;
+        font-size: 40px;
+        letter-spacing: 1px;
+    }
+    
+}
